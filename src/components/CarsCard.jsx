@@ -22,7 +22,7 @@ const CarsCard = () => {
         <Row>
           {currentPosts.map((item) => (
             <Col style={{ marginBottom: "25px" }} md={4} sm={6} xs={12}>
-              <Card key={item.id} style={{ width: "18rem" }}>
+              <Card key={item.id} style={{ width: "18rem", height: '350px' }}>
                 <Card.Body style={{ textAlign: "center" }}>
                   <Card.Title style={{ color: "gray" }}>
                     {item.brand}

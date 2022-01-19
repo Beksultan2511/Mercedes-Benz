@@ -59,7 +59,7 @@ const MyProvider = (props) => {
     } catch (error) {
       console.log(error);
     }
-    getCar();
+    getProducts();
   }
   async function getCar() {
     try {
@@ -90,7 +90,7 @@ const MyProvider = (props) => {
   async function deleteCar(id) {
     try {
       await axios.delete(`${API}/${id}`);
-      getCar();
+      getProducts();
     } catch (error) {
       console.log(error);
     }

@@ -1,108 +1,76 @@
 {
-  "products": [
+  "apartments": [
     {
-      "brand": "Mercedes-Benz CLs 55",
-      "price": "49999",
-      "color": "SILVER",
-      "image": "https://s1.1zoom.ru/b4562/200/Mercedes-Benz_AMG_C-class_W205_Silver_color_554473_2560x1440.jpg",
-      "year": "2016",
-      "id": 1
-    },
-    {
-      "brand": "Mercedes-Benz AMG 63",
-      "price": 8999,
-      "color": "BLACK",
-      "image": "https://1gai.ru/uploads/posts/2014-10/1414426410_mercedes-benz-s550-coupe-30.jpg",
-      "year": "2018",
+      "rooms": "4",
+      "price": 100000,
+      "address": "Bishkek, Mossovet",
+      "image": "https://mykaleidoscope.ru/uploads/posts/2021-04/1617253012_39-p-avangard-v-interere-39.jpg",
+      "area": "96",
       "id": 2
     },
     {
-      "brand": "Mercedes-Benz Brabus 43",
-      "price": 39232,
-      "color": "BLACK",
-      "image": "https://avatars.mds.yandex.net/get-autoru-vos/2173513/cb13ccacaee24f18bd9f593b3462618c/1200x900",
-      "year": "2020",
+      "rooms": "5",
+      "price": 233999,
+      "address": "Bishkek, mr. Ch. Aitmatov, 143",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c4bfb684320423.5d597bb95e731.jpg",
+      "area": "178",
       "id": 3
     },
     {
-      "brand": "Mercedes-Benz SL 500",
-      "price": 89876,
-      "color": "WHITE",
-      "image": "https://w-dog.ru/wallpapers/0/15/484066813996516/2015-g-mercedes-benz-s-63-amg-kupe-as-spec-c217-mersedes-amg.jpg",
-      "year": "2015",
+      "rooms": "3",
+      "price": 111299,
+      "address": "Bishkek, Almatinskaya 87",
+      "image": "https://im0-tub-ru.yandex.net/i?id=1f543502fe1ffdd3566edf98010daab0-l&ref=rim&n=13&w=1080&h=739",
+      "area": "79",
       "id": 4
     },
     {
-      "brand": "Mercedes-Benz",
-      "price": 67232,
-      "color": "RED",
-      "image": "https://i.artfile.ru/2048x1536_885212_[www.ArtFile.ru].jpg",
-      "year": "2017",
+      "rooms": "4",
+      "price": 199999,
+      "address": "Bishkek, Magistral, 32",
+      "image": "https://static.wixstatic.com/media/580fe0_27773eebb87440e1b0a2290e9d991126~mv2.jpg/v1/fill/w_1000,h_700,al_c,q_90/file.jpg",
+      "area": "166",
       "id": 5
     },
     {
-      "brand": "Mercedes-Benz McLaren",
-      "price": 78888,
-      "color": "BLUE",
-      "image": "https://img3.goodfon.ru/wallpaper/nbig/2/29/amg-mercedes-benz-slc-class-662.jpg",
-      "year": "2021",
+      "rooms": "2",
+      "price": 69999,
+      "address": "Bishkek, 5 mkr. house 11",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47246f41602737.57ac684425c00.jpg",
+      "area": "78",
       "id": 6
     },
     {
-      "brand": "Mercedes-Benz SLS 600",
-      "price": 1292222,
-      "color": "WHITE",
-      "image": "https://s.rdrom.ru/1/pubs/4/21702/711006.jpg",
-      "year": "2015",
+      "rooms": "5",
+      "price": 78999,
+      "address": "Bishkek, pr. Chuy, 127",
+      "image": "https://braintwister.design/uploads/posts/2018-07/1532338717_016.jpg",
+      "area": "98",
       "id": 7
     },
     {
-      "brand": "Mercedes-Benz GTS 63",
-      "price": 2922222,
-      "color": "RED",
-      "image": "https://s1.1zoom.ru/b6254/66/Mercedes-Benz_2014_511723_1600x1200.jpg",
-      "year": "2022",
+      "rooms": "6",
+      "price": 299999,
+      "address": "Bishkek, Suhe-Batora str.",
+      "image": "https://images.homify.com/c_fill,f_auto,h_700,q_auto/v1551556707/p/photo/image/2941912/WhatsApp_Image_2018-12-20_at_19.00.55.jpg",
+      "area": "192",
       "id": 8
     },
     {
-      "brand": "Mercedes-Benz GG 55",
-      "price": 79999,
-      "color": "BLACK",
-      "image": "https://www.avtorinok.ru/photo/pics/mercedes-benz/g63-amg/104058.jpg",
-      "year": "2010",
+      "rooms": "3",
+      "price": 187099,
+      "address": "Bishkek, Erkindik B., 188",
+      "image": "https://images.homify.com/image/upload/a_0,c_fit,f_auto,q_auto,w_1108/v1555917022/p/photo/image/3021597/%C4%B0%C3%A7mekan_1.jpg",
+      "area": "178",
       "id": 9
     },
     {
-      "brand": "Mercedes-Benz GG 63",
-      "price": 782121,
-      "color": "YELLOW",
-      "image": "https://avatars.mds.yandex.net/get-autoru-vos/2165557/a40ab51d22c08757c93cf38b812ab44c/1200x900",
-      "year": "2017",
+      "rooms": "iui",
+      "price": null,
+      "address": "gig",
+      "image": "ygygy",
+      "area": "ygyig",
       "id": 10
-    },
-    {
-      "brand": "Mercedes-Benz Gelendwagen 55",
-      "price": 89212,
-      "color": "BLACK",
-      "image": "https://wiki.mininuniver.ru/images/c/cd/6531393771300_history-auto.info_mercedes-benz_gl-450-x166.jpg",
-      "year": "2013",
-      "id": 11
-    },
-    {
-      "brand": "Mercedes-Benz GG 43",
-      "price": 93921,
-      "color": "WHITE",
-      "image": "https://www.avtorinok.ru/photo/pics/mercedes-benz/gl/104685.jpg",
-      "year": "2019",
-      "id": 12
-    },
-    {
-      "brand": "Mecedes-Benz GL 55 S",
-      "price": 891121,
-      "color": "BLACK",
-      "image": "http://autoboutique.cars.ua/img/upload/cache/aoe-1_q-85_h-1200_w-1800_57d96f4666b037.57389520.jpg",
-      "year": "2012",
-      "id": 13
     }
   ]
 }

@@ -1,14 +1,14 @@
+
 import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 const firebaseConfig = {
-  apiKey: "AIzaSyAmMC1HK0V1LDALGpkEgJKxpQ3OWDkyuxk",
-  authDomain: "mercedes-benz-390ce.firebaseapp.com",
-  projectId: "mercedes-benz-390ce",
-  storageBucket: "mercedes-benz-390ce.appspot.com",
-  messagingSenderId: "186483101421",
-  appId: "1:186483101421:web:6623c197e64b65164a46e4"
+  apiKey: "AIzaSyDt6Y1wuXmPZeY_ncKDSVDz__w5lcAYW9Q",
+  authDomain: "avangard-b8407.firebaseapp.com",
+  projectId: "avangard-b8407",
+  storageBucket: "avangard-b8407.appspot.com",
+  messagingSenderId: "99711524791",
+  appId: "1:99711524791:web:73c041b14614b95e621232"
 };
-
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)

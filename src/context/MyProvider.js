@@ -6,7 +6,7 @@ import { API } from "../helpers/const";
 export const productContext = React.createContext();
 let cart = JSON.parse(localStorage.getItem("cart"))
 const INIT_STATE = {
-  cars: null,
+  flats: null,
   details: null,
   toEdit: null,
   productsCount: cart ? cart.products.length : 0,
@@ -15,17 +15,17 @@ const INIT_STATE = {
 };
 const reducer = (state, action) => {
   switch (action.type) {
-    case "GET_CAR":
+    case "GET_FLAT":
       return {
         ...state,
-        cars: action.payload,
+        flats: action.payload,
       };
       case "GET_PRODUCTS":
         return {
           ...state,
           products: action.payload,
         };
-    case "DETAILS_CAR":
+    case "DETAILS_FLAT":
       return {
         ...state,
         details: action.payload,
@@ -53,20 +53,20 @@ const reducer = (state, action) => {
 const MyProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function addCar(newCar) {
+  async function addFlat(newFlat) {
     try {
-      await axios.post(API, { ...newCar, price: +newCar.price });
+      await axios.post(API, { ...newFlat, price: +newFlat.price });
     } catch (error) {
       console.log(error);
     }
     getProducts();
   }
-  async function getCar() {
+  async function getFlat() {
     try {
       let response = await axios(API);
       console.log(response)
       let action = {
-        type: "GET_CAR",
+        type: "GET_FLAT",
         payload: response.data,
       };
       dispatch(action);
@@ -74,11 +74,11 @@ const MyProvider = (props) => {
       console.log(error);
     }
   }
-  async function detailsCar(id) {
+  async function detailsFlat(id) {
     try {
       let response = await axios(`${API}/${id}`);
       let action = {
-        type: "DETAILS_CAR",
+        type: "DETAILS_FLAT",
         payload: response.data,
       };
       dispatch(action);
@@ -87,7 +87,7 @@ const MyProvider = (props) => {
     }
   }
 
-  async function deleteCar(id) {
+  async function deleteFlat(id) {
     try {
       await axios.delete(`${API}/${id}`);
       getProducts();
@@ -112,13 +112,12 @@ const MyProvider = (props) => {
     console.log(editedCar);
     try {
       await axios.patch(`${API}/${editedCar.id}`, editedCar);
-      getCar();
+      getFlat();
     } catch (error) {
       console.log(error);
     }
   }
 
-  //pagination
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
@@ -136,7 +135,7 @@ const MyProvider = (props) => {
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   let totalCount = posts.length;
 
-//cart
+//favourites
 function addAndDelete(product) {
   let cart = JSON.parse(localStorage.getItem("cart"));
   if (!cart) {
@@ -243,6 +242,7 @@ const getProducts = async () => {
   }
 };
 
+
   return (
     <productContext.Provider
       value={{
@@ -250,12 +250,12 @@ const getProducts = async () => {
         saveEdited,
         getToEdit,
         toEdit: state.toEdit,
-        deleteCar,
-        detailsCar,
+        deleteFlat,
+        detailsFlat,
         details: state.details,
-        addCar,
-        getCar,
-        cars: state.cars,
+        addFlat,
+        getFlat,
+        flats: state.flats,
         postsPerPage,
         totalCount,
         currentPosts,

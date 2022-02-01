@@ -1,59 +1,38 @@
-import React, { useContext, useState } from "react";
-import { Button, Modal, Table } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { productContext } from "../context/MyProvider";
 import deleteIcon from "../images/delete.png";
-import CreditCardPage from "./CreditCardPage";
-import ModalOrder from "./ModalOrder";
 
 const CartTable = ({ cart }) => {
-  const { changeCount, deleteProductInCart } = useContext(productContext);
-  const [order, setOrder] = useState(null);
+  const { deleteProductInCart } = useContext(productContext);
 
   return (
     <div>
-      <Table striped bordered hover>
+      <Table style={{ background: "white" }} striped bordered hover>
         <thead>
           <tr>
-            <th>Brand</th>
-            <th>Color</th>
-            <th>Year</th>
+            <th>Address</th>
+            <th>Rooms count</th>
+            <th>Area</th>
             <th>Image</th>
-            <th>Count</th>
-            <th>SubPrice</th>
+            <th>Price</th>
             <td>#</td>
           </tr>
         </thead>
         <tbody>
           {cart.products.map((item) => (
             <tr key={item.product.id}>
-              <td>{item.product.brand}</td>
-              <td>{item.product.color}</td>
-              <td>{item.product.year}</td>
+              <td>{item.product.address}</td>
+              <td>{item.product.rooms}</td>
+              <td>{item.product.area} m3</td>
               <td>
                 <Link to={`/details/${item.product.id}`}>
                   <img width={100} src={item.product.image} alt="" />
                 </Link>
               </td>
-              <td>
-                <input
-                  style={{
-                    textAlign: "center",
-                    width: "50px",
-                    borderRadius: "25px",
-                    border: "1px solid black",
-                  }}
-                  onChange={(e) => {
-                    if (e.target.value < 1) {
-                      return;
-                    }
-                    changeCount(e.target.value, item.product.id);
-                  }}
-                  type="number"
-                  value={item.count}
-                />
-              </td>
-              <td>{item.subPrice}$</td>
+              <td>{item.product.price} $</td>
+
               <td>
                 <img
                   style={{ cursor: "pointer" }}
@@ -68,19 +47,9 @@ const CartTable = ({ cart }) => {
             </tr>
           ))}
         </tbody>
-        <tfoot>
-          <tr>
-            <td>
-              <strong>Total price:</strong>
-            </td>
-            <td>{cart.totalPrice}$</td>
-            <td>
-                <ModalOrder/>
-            </td>
-          </tr>
-        </tfoot>
+        
       </Table>
-      {/* <CreditCardPage/> */}
+      
     </div>
   );
 };

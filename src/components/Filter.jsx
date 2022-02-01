@@ -7,7 +7,6 @@ const Filter = () => {
   let search = new URLSearchParams(window.location.search);
   let navigate = useNavigate();
   const { getProducts, products } = useContext(productContext);
-console.log(products)
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [value, setValue] = useState("");
@@ -51,7 +50,7 @@ console.log(products)
           value={to}
           placeholder="To"
         />
-        <Button onClick={reset} variant="dark">
+        <Button onClick={reset} variant="primary">
           RESET
         </Button>
       </div>

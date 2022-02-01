@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(http://oir.kg/home/2016/11/Glavnoe-foto-7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+    
 }
 .main-add {
   width: 100%;
@@ -82,8 +87,14 @@ code {
 }
 .details-info{
   width: 30%;
+  background: rgba(0, 0, 0, 0.568);
+  padding: 30px;
+  margin-right: 30px;
+  border-radius: 50px;
+  color: white;
 }
 .page-link{
   background: black !important;
   color: white !important;
+  
 }

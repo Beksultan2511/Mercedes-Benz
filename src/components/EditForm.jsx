@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { productContext } from "../context/MyProvider";
 
 const EditForm = ({ toEdit }) => {
-  const [brand, setBrand] = useState(toEdit.brand);
+  
+  const [rooms, setRooms] = useState(toEdit.rooms);
   const [price, setPrice] = useState(toEdit.price);
-  const [color, setColor] = useState(toEdit.color);
+  const [address, setAddress] = useState(toEdit.address);
   const [image, setImage] = useState(toEdit.image);
-  const [year, setYear] = useState(toEdit.year);
+  const [area, setArea] = useState(toEdit.area);
   const {saveEdited} = useContext(productContext)
     const navigate = useNavigate()
 
@@ -16,11 +17,11 @@ const EditForm = ({ toEdit }) => {
       e.preventDefault()
       let edited = {
           ...toEdit,
-          brand,
+          rooms,
           price,
-          color,
+          address,
           image,
-          year,
+          area,
       }
       saveEdited(edited)
       navigate('/')
@@ -31,14 +32,14 @@ const EditForm = ({ toEdit }) => {
       <div className="form-save">
         <form onSubmit={handleSubmit}>
           <FormControl
-            onChange={(e) => setBrand(e.target.value)}
-            value={brand}
+            onChange={(e) => setRooms(e.target.value)}
+            value={rooms}
           />
           <FormControl onChange={(e) => setPrice(e.target.value)} value={price} />
-          <FormControl onChange={(e) => setColor(e.target.value)} value={color} />
+          <FormControl onChange={(e) => setAddress(e.target.value)} value={address  } />
           <FormControl onChange={(e) => setImage(e.target.value)} value={image} />
-          <FormControl onChange={(e) => setYear(e.target.value)} value={year} />
-          <Button type="submit" variant="dark">Save</Button>
+          <FormControl onChange={(e) => setArea(e.target.value)} value={area} />
+          <Button type="submit" variant="primary">Save</Button>
         </form>
       </div>
     </div>

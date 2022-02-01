@@ -6,33 +6,33 @@ import { useNavigate } from "react-router-dom";
 import { productContext } from "../context/MyProvider";
 
 const AddPage = () => {
-  const [brand, setBrand] = useState("");
+  const [rooms, setRooms] = useState("");
   const [price, setPrice] = useState("");
-  const [color, setColor] = useState("");
+  const [address, setAddress] = useState("");
   const [image, setImage] = useState("");
-  const [year, setYear] = useState("");
-  const { addCar } = useContext(productContext);
+  const [area, setArea] = useState("");
+  const { addFlat } = useContext(productContext);
   const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
-    if(!brand.trim() || !price.trim() || !color.trim() || !image.trim() || !year.trim()){
+    if(!rooms.trim() || !price.trim() || !address.trim() || !image.trim() || !area.trim()){
       alert('Fields required')
       return
     }
-    let newCar = {
-      brand,
+    let newFlat = {
+      rooms,
       price,
-      color,
+      address,
       image,
-      year,
+      area,
     };
-    addCar(newCar);
-    setBrand("");
+    addFlat(newFlat);
+    setRooms("");
     setPrice("");
-    setColor("");
+    setAddress("");
     setImage("");
-    setYear("");
+    setArea("");
     navigate('/')
   }
   return (
@@ -41,37 +41,37 @@ const AddPage = () => {
         <form onSubmit={handleSubmit}>
           <FormControl
             onChange={(e) => {
-              setBrand(e.target.value);
+              setRooms(e.target.value);
             }}
-            placeholder="Enter brand"
+            placeholder="Specify the number of rooms"
           />
           <FormControl
           
             onChange={(e) => {
               setPrice(e.target.value);
             }}
-            placeholder="Enter price"
+            placeholder="Specify the price of the apartment"
           />
           <FormControl
             onChange={(e) => {
-              setColor(e.target.value);
+              setAddress(e.target.value);
             }}
-            placeholder="Enter color"
+            placeholder="Specify the address of the apartment"
           />
           <FormControl
             onChange={(e) => {
               setImage(e.target.value);
             }}
-            placeholder="Enter url"
+            placeholder="Insert a picture of the apartment"
           />
           <FormControl
             onChange={(e) => {
-              setYear(e.target.value);
+              setArea(e.target.value);
             }}
-            placeholder="Enter year"
+            placeholder="Specify the area of the apartment"
           />
-          <Button type="submit" variant="danger">
-            ADD PRODUCT
+          <Button type="submit" variant="success">
+            ADD A NEW FLAT
           </Button>
         </form>
       </div>

@@ -1,29 +1,22 @@
 import React, { useContext } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { authContext } from "../context/AuthProvider";
-import Badge from "react-bootstrap/Badge";
-import { productContext } from "../context/MyProvider";
-import cartIcon from "../images/shopping-cart.png";
+import favourites from '../images/favourite.png'
 const MyNav = () => {
   const { authWithGoogle, logout, user } = useContext(authContext);
-  const { productsCount } = useContext(productContext);
   return (
     <div>
-      <Navbar bg="dark" expand="lg">
+      <Navbar bg="transparent" expand="lg">
         <Container>
           <Link style={{ marginRight: "30px" }} className="mers-logo" to="/">
             <img
               style={{ marginRight: "10px" }}
-              width={60}
-              src="https://i.pinimg.com/originals/f1/ca/73/f1ca73e3396a53f45753dfd3a698445c.png"
+              width={80}
+              src="https://avangardstyle.kg/wp-content/uploads/2019/01/logo-1.svg"
               alt=""
             />
-            <img
-              width={100}
-              src="https://cars.mercedes-benz.ru/Content/images/logo2.svg"
-              alt=""
-            />
+            
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -39,10 +32,10 @@ const MyNav = () => {
             >
               <div style={{ display: "flex" }}>
                 <Link className="nav-link" to="/">
-                  ASSORTMENT
+                  APARTMENTS
                 </Link>
                 <Link className="nav-link" to="/add">
-                  ADD A NEW CAR
+                  NEW APARTMENT
                 </Link>
               </div>
               <div style={{ display: "flex" }}>
@@ -52,8 +45,8 @@ const MyNav = () => {
                   }}
                   to="/cart"
                 >
-                  <Badge bg="danger">{productsCount}</Badge>
-                  <img width={30} src={cartIcon} alt="" />
+                  <img width={30} src={favourites} alt="" />
+
                 </Link>
                 {user ? (
                   <div
